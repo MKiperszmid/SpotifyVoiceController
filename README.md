@@ -4,23 +4,28 @@ Are you tired of playing a game, and manually have to change songs on Spotify?
 
 Here's the solution.
 
-With Spotify Voice Controller you will gain control of Spotify, with just your vocie!
+With Spotify Voice Controller you will gain control of Spotify, with just your voice!
 
-# Commands
+------------------------------------------------------------------------------------------------------------------------------------------
 
-#Play
+# Commands: 
+
+# Play
 
 Will Play the current song.
 
-#Pause
+# Pause
 
 Will Pause the current song.
 
-#Next
+# Next
 
 Will Skip the current song.
 
-#Previous
+# Previous
 
 Will Return to the previous song.
 
+# Enable
+
+It will Disable/Enable the voice recognition.
