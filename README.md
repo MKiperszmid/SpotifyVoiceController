@@ -26,11 +26,11 @@ Will Skip the current song.
 
 Will Return to the previous song.
 
-# UP
+# Up
 
 Will increase the Volume.
 
-# DOWN
+# Down
 
 Will decrease the Volume.
 
