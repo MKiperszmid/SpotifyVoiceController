@@ -25,3 +25,7 @@ Will Skip the current song.
 # Previous
 
 Will Return to the previous song.
+
+# Enable
+
+It will Disable/Enable the voice recognition.
