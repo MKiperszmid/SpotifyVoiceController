@@ -1,0 +1,12 @@
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Release\SpotifyController.exe.config
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Release\SpotifyController.exe
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Release\SpotifyController.pdb
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Release\Newtonsoft.Json.dll
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Release\SpotifyAPI.dll
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Release\Newtonsoft.Json.xml
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Release\SpotifyAPI.xml
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\obj\Release\SpotifyController.Form1.resources
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\obj\Release\SpotifyController.Properties.Resources.resources
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\obj\Release\SpotifyController.csproj.GenerateResource.Cache
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\obj\Release\SpotifyController.exe
+D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\obj\Release\SpotifyController.pdb
