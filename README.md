@@ -7,20 +7,21 @@ Here's the solution.
 With Spotify Voice Controller you will gain control of Spotify, with just your vocie!
 
 # Commands
+------------------------------------------------------------------------------------------------------------------------------------------
 
-#Play
+# Play
 
 Will Play the current song.
 
-#Pause
+# Pause
 
 Will Pause the current song.
 
-#Next
+# Next
 
 Will Skip the current song.
 
-#Previous
+# Previous
 
 Will Return to the previous song.
 
