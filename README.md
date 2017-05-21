@@ -6,8 +6,9 @@ Here's the solution.
 
 With Spotify Voice Controller you will gain control of Spotify, with just your vocie!
 
-# Commands
 ------------------------------------------------------------------------------------------------------------------------------------------
+
+# Commands: 
 
 # Play
 
