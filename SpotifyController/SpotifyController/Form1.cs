@@ -101,6 +101,28 @@ namespace SpotifyController
                     {
                         spotify.Previous();
                     }
+                    if (rec.Text == "up")
+                    {
+                        try
+                        {
+                            spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() + 10);
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+                    }
+                    if (rec.Text == "down")
+                    {
+                        try
+                        {
+                            spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() - 10);
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+                    }
                 }
                 if (rec.Text == "enable"
                     || rec.Text == "naval"

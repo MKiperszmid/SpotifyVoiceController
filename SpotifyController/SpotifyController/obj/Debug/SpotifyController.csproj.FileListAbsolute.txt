@@ -11,3 +11,16 @@ D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyControl
 D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Debug\SpotifyAPI.dll
 D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Debug\Newtonsoft.Json.xml
 D:\MKiper\Documents\Visual Studio 2017\Projects\SpotifyController\SpotifyController\bin\Debug\SpotifyAPI.xml
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\Newtonsoft.Json.dll
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\SpotifyAPI.dll
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\Newtonsoft.Json.xml
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\SpotifyAPI.xml
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\obj\Debug\SpotifyController.csprojResolveAssemblyReference.cache
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\obj\Debug\SpotifyController.Form1.resources
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\obj\Debug\SpotifyController.Properties.Resources.resources
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\obj\Debug\SpotifyController.csproj.GenerateResource.Cache
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\obj\Debug\SpotifyController.exe
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\obj\Debug\SpotifyController.pdb
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\SpotifyController.exe.config
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\SpotifyController.exe
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\SpotifyController.pdb
