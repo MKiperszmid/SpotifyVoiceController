@@ -4,7 +4,7 @@ Are you tired of playing a game, and manually have to change songs on Spotify?
 
 Here's the solution.
 
-With Spotify Voice Controller you will gain control of Spotify, with just your vocie!
+With Spotify Voice Controller you will gain control of Spotify, with just your voice!
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
