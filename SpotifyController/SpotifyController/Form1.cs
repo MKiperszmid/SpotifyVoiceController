@@ -111,13 +111,13 @@ namespace SpotifyController
                     {
                         try
                         {
-                            spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() + 10);
+                            spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() + 5);
                         }
                         catch (Exception ex)
                         {
                             try
                             {
-                                spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() + 5);
+                                spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() + 1);
                             }
                             catch (Exception exc)
                             {
@@ -130,13 +130,13 @@ namespace SpotifyController
                     {
                         try
                         {
-                            spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() - 10);
+                            spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() - 5);
                         }
                         catch (Exception ex)
                         {
                             try
                             {
-                                spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() - 5);
+                                spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() - 1);
                             }
                             catch (Exception exc)
                             {
