@@ -1,6 +1,6 @@
 ﻿namespace SpotifyController
 {
-    partial class Form1
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDetected = new System.Windows.Forms.Label();
+            this.lblSong = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblDetected
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.lblDetected.AutoSize = true;
+            this.lblDetected.Location = new System.Drawing.Point(12, 11);
+            this.lblDetected.Name = "lblDetected";
+            this.lblDetected.Size = new System.Drawing.Size(35, 13);
+            this.lblDetected.TabIndex = 1;
+            this.lblDetected.Text = "label1";
             // 
-            // label2
+            // lblSong
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.lblSong.AutoSize = true;
+            this.lblSong.Location = new System.Drawing.Point(13, 28);
+            this.lblSong.Name = "lblSong";
+            this.lblSong.Size = new System.Drawing.Size(35, 13);
+            this.lblSong.TabIndex = 2;
+            this.lblSong.Text = "label2";
             // 
-            // Form1
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 53);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSong);
+            this.Controls.Add(this.lblDetected);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "SpotifyController";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDetected;
+        private System.Windows.Forms.Label lblSong;
     }
 }
 
