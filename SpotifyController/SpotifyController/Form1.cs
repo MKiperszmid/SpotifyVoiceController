@@ -2,6 +2,9 @@
 using System.Windows.Forms;
 using System.Speech.Recognition;
 using SpotifyAPI.Local;
+using System.IO;
+using System.Threading;
+using SpotifyAPI.Local.Models;
 
 namespace SpotifyController
 {
@@ -11,12 +14,15 @@ namespace SpotifyController
         private bool enable;
         private SpotifyLocalAPI spotify;
         private bool connected;
-
+        private string currentSong = "";
+        private string Dir = Directory.GetCurrentDirectory() + "\\Song.txt";
+        
         public Form1()
         {
             InitializeComponent();
             Connect();
             EnableVoice();
+            CreateDirectory();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -67,9 +73,8 @@ namespace SpotifyController
             }
         }
 
-        private void Listener(object o, SpeechRecognizedEventArgs e)
+        private async void Listener(object o, SpeechRecognizedEventArgs e)
         {
-            
             foreach (var rec in e.Result.Words)
             {
                 if (enable)
@@ -82,14 +87,14 @@ namespace SpotifyController
                         || rec.Text == "eight"
                         || rec.Text == "lay") //Different words, since my english is not the best, and it didn't detect very well.
                     {
-                        spotify.Play();
+                        await spotify.Play();
                     }
                     if (rec.Text == "pause"
                         || rec.Text == "pulse"
                         || rec.Text == "balls"
                         || rec.Text == "boasts")
                     {
-                        spotify.Pause();
+                        await spotify.Pause();
                     }
                     if (rec.Text == "next")
                     {
@@ -101,7 +106,8 @@ namespace SpotifyController
                     {
                         spotify.Previous();
                     }
-                    if (rec.Text == "up")
+                    if (rec.Text == "up"
+                        || rec.Text == "out")
                     {
                         try
                         {
@@ -109,10 +115,18 @@ namespace SpotifyController
                         }
                         catch (Exception ex)
                         {
+                            try
+                            {
+                                spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() + 5);
+                            }
+                            catch (Exception exc)
+                            {
 
+                            }
                         }
                     }
-                    if (rec.Text == "down")
+                    if (rec.Text == "down"
+                        || rec.Text == "non")
                     {
                         try
                         {
@@ -120,9 +134,17 @@ namespace SpotifyController
                         }
                         catch (Exception ex)
                         {
+                            try
+                            {
+                                spotify.SetSpotifyVolume(spotify.GetSpotifyVolume() - 5);
+                            }
+                            catch (Exception exc)
+                            {
 
+                            }
                         }
                     }
+                    
                 }
                 if (rec.Text == "enable"
                     || rec.Text == "naval"
@@ -132,6 +154,25 @@ namespace SpotifyController
                     label1.Text = "Enable: " + enable;
                 }
             }
+            SaveSong();
+        }
+
+        private void CreateDirectory()
+        {
+            if (!File.Exists(Dir))
+                File.Create(Dir);
+        }
+
+        private void SaveSong()
+        {
+            if (currentSong == spotify.GetStatus().Track.ArtistResource.Name + " - " +
+                spotify.GetStatus().Track.TrackResource.Name) return;
+                
+            currentSong = spotify.GetStatus().Track.ArtistResource.Name + " - " +
+                            spotify.GetStatus().Track.TrackResource.Name;
+
+            File.WriteAllText(Dir, currentSong);
+            label2.Text = currentSong;
         }
     }
 }
