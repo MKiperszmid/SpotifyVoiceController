@@ -92,6 +92,8 @@ Application will now close.", @"Not Running", MessageBoxButtons.OK, MessageBoxIc
 
         public string GetSong()
         {
+            if (String.IsNullOrEmpty(_spotify.GetStatus().Track.TrackResource.Name))
+                return "";
             return _spotify.GetStatus().Track.TrackResource.Name;
         }
 
