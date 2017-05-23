@@ -18,9 +18,11 @@ namespace SpotifyController
         
         //Different words, since my english is not the best, and it didn't detect very well.
         private readonly List<string> _play = new List<string> { "play", "way", "late", "date", "eight", "lay" };
-        private readonly List<string> _pause = new List<string> { "pulse", "balls", "boasts" };
+        private readonly List<string> _pause = new List<string> { "pause", "pulse", "balls", "boasts" };
         private readonly List<string> _next = new List<string> { "next" };
         private readonly List<string> _previous = new List<string> { "previous", "previews", "preview" };
+        private readonly List<string> _up = new List<string> { "up", "out" };
+        private readonly List<string> _down = new List<string> { "down", "non" };
         private readonly List<string> _enableRecognition = new List<string> {"enable", "naval", "able"};
 
         public FrmMain()
@@ -103,8 +105,7 @@ namespace SpotifyController
                     {
                         _spotify.Previous();
                     }
-                    if (rec.Text == "up"
-                        || rec.Text == "out")
+                    if (_up.Contains(rec.Text))
                     {
                         if (_spotify.GetSpotifyVolume() + 5 <= 100)
                         {
@@ -115,8 +116,7 @@ namespace SpotifyController
                             _spotify.SetSpotifyVolume(_spotify.GetSpotifyVolume() + 1);
                         }
                     }
-                    if (rec.Text == "down"
-                        || rec.Text == "non")
+                    if (_down.Contains(rec.Text))
                     {
                         if (_spotify.GetSpotifyVolume() - 5 >= 0)
                         {
@@ -131,7 +131,7 @@ namespace SpotifyController
                 if (_enableRecognition.Contains(rec.Text))
                 {
                     _enable = !_enable;
-                    lblDetected.Text = "Enable: " + _enable;
+                    lblDetected.Text = $@"Enable: {_enable}";
                 }
             }
             SaveSong();
