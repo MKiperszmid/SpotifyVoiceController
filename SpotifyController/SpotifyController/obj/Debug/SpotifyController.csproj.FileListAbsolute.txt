@@ -23,4 +23,4 @@ D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyCont
 D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\SpotifyController.exe.config
 D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\SpotifyController.exe
 D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\bin\Debug\SpotifyController.pdb
-D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\obj\Debug\SpotifyController.frmMain.resources
+D:\Github Repository\Spotify Voice Controller\SpotifyVoiceController\SpotifyController\SpotifyController\obj\Debug\SpotifyController.FormMain.resources
