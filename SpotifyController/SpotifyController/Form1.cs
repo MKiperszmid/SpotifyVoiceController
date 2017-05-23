@@ -41,7 +41,7 @@ namespace SpotifyController
             {
                 _sre.SetInputToDefaultAudioDevice();
                 _sre.LoadGrammar(new DictationGrammar());
-                _sre.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(Listener);
+                _sre.SpeechRecognized += Listener;
                 _sre.RecognizeAsync(RecognizeMode.Multiple);
                 _enable = true;
             }
