@@ -37,18 +37,18 @@
             this.labelDetected.AutoSize = true;
             this.labelDetected.Location = new System.Drawing.Point(12, 11);
             this.labelDetected.Name = "labelDetected";
-            this.labelDetected.Size = new System.Drawing.Size(35, 13);
+            this.labelDetected.Size = new System.Drawing.Size(67, 13);
             this.labelDetected.TabIndex = 1;
-            this.labelDetected.Text = "label1";
+            this.labelDetected.Text = "Connecting..";
             // 
             // labelSong
             // 
             this.labelSong.AutoSize = true;
             this.labelSong.Location = new System.Drawing.Point(13, 28);
             this.labelSong.Name = "labelSong";
-            this.labelSong.Size = new System.Drawing.Size(35, 13);
+            this.labelSong.Size = new System.Drawing.Size(67, 13);
             this.labelSong.TabIndex = 2;
-            this.labelSong.Text = "label2";
+            this.labelSong.Text = "Connecting..";
             // 
             // FormMain
             // 

@@ -33,6 +33,7 @@ namespace SpotifyController
             _spotify = new Spotify();
             EnableVoice();
             CreateDirectory();
+            labelSong.Text = @"Spotify Detected";
         }
 
         private void EnableVoice()
@@ -44,6 +45,7 @@ namespace SpotifyController
                 _sre.SpeechRecognized += Listener;
                 _sre.RecognizeAsync(RecognizeMode.Multiple);
                 _enable = true;
+                labelDetected.Text = @"Speech Recognition Enabled";
             }
             catch (Exception ex)
             {
