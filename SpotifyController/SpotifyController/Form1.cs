@@ -76,18 +76,22 @@ namespace SpotifyController
 
                     if (_up.Contains(rec.Text))
                     {
-                        if (_spotify.GetVolume() + 5 <= 100)
-                            _spotify.SetVolume(5);
+                        if (_spotify.GetVolume() + 10 <= 100)
+                            _spotify.SetVolume(10);
 
+                        else if (_spotify.GetVolume() + 2 <= 100)
+                            _spotify.SetVolume(2);
                         else if (_spotify.GetVolume() + 1 <= 100)
                             _spotify.SetVolume(1);
                     }
                     if (_down.Contains(rec.Text))
                     {
-                        if (_spotify.GetVolume() - 5 >= 0)
-                            _spotify.SetVolume(-5);
+                        if (_spotify.GetVolume() - 10 >= 0)
+                            _spotify.SetVolume(-10);
 
-                        else if(_spotify.GetVolume() - 1 >= 0)
+                        else if(_spotify.GetVolume() - 2 >= 0)
+                            _spotify.SetVolume(- 2);
+                        else if (_spotify.GetVolume() - 1 >= 0)
                             _spotify.SetVolume(-1);
                     }
                 }
