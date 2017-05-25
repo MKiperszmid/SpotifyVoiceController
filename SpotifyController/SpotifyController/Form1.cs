@@ -62,19 +62,20 @@ namespace SpotifyController
                 if (_enable)
                 {
                     labelDetected.Text = rec.Text;
+
                     if (_play.Contains(rec.Text))
                         _spotify.Play();
 
-                    if (_pause.Contains(rec.Text))
+                    else if (_pause.Contains(rec.Text))
                         _spotify.Pause();
 
-                    if (_next.Contains(rec.Text))
+                    else if (_next.Contains(rec.Text))
                         _spotify.Next();
 
-                    if (_previous.Contains(rec.Text))
+                    else if (_previous.Contains(rec.Text))
                         _spotify.Previous();
 
-                    if (_up.Contains(rec.Text))
+                    else if (_up.Contains(rec.Text))
                     {
                         if (_spotify.GetVolume() + 10 <= 100)
                             _spotify.SetVolume(10);
@@ -84,7 +85,7 @@ namespace SpotifyController
                         else if (_spotify.GetVolume() + 1 <= 100)
                             _spotify.SetVolume(1);
                     }
-                    if (_down.Contains(rec.Text))
+                    else if (_down.Contains(rec.Text))
                     {
                         if (_spotify.GetVolume() - 10 >= 0)
                             _spotify.SetVolume(-10);
@@ -95,11 +96,9 @@ namespace SpotifyController
                             _spotify.SetVolume(-1);
                     }
                 }
-                if (_enableRecognition.Contains(rec.Text))
-                {
-                    _enable = !_enable;
-                    labelDetected.Text = $@"Enable: {_enable}";
-                }
+                if (!_enableRecognition.Contains(rec.Text)) continue;
+                _enable = !_enable;
+                labelDetected.Text = $@"Enable: {_enable}";
             }
         }
 
