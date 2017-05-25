@@ -34,6 +34,7 @@ namespace SpotifyController
             EnableVoice();
             CreateDirectory();
             labelSong.Text = @"Spotify Detected";
+            _spotify.UpdateTrack();
         }
 
         private void EnableVoice()
@@ -56,7 +57,6 @@ namespace SpotifyController
         private void Listener(object o, SpeechRecognizedEventArgs e)
         {
             _spotify.CheckSpotify();
-            SaveSong();
             foreach (var rec in e.Result.Words)
             {
                 if (_enable)
@@ -100,6 +100,7 @@ namespace SpotifyController
                 _enable = !_enable;
                 labelDetected.Text = $@"Enable: {_enable}";
             }
+            SaveSong();
         }
 
         private void CreateDirectory()

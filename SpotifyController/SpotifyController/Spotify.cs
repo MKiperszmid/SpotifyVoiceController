@@ -13,6 +13,8 @@ namespace SpotifyController
     public class Spotify
     {
         private SpotifyLocalAPI _spotify;
+        private string _currentPlaying = "";
+        private readonly string _dir = Directory.GetCurrentDirectory() + "\\Song.txt";
 
         public Spotify()
         {
@@ -30,11 +32,33 @@ namespace SpotifyController
 Application will now close.", @"Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(0);
             }
+            _spotify.ListenForEvents = true;
+        }
+
+        public void UpdateTrack()
+        {
+            _spotify.OnTrackChange += _spotify_OnTrackChange;
+        }
+
+        private void _spotify_OnTrackChange(object sender, TrackChangeEventArgs e)
+        {
+            _currentPlaying = e.NewTrack.TrackResource.Name + " - " + e.NewTrack.ArtistResource.Name;
         }
 
         public bool Connected()
         {
-            return _spotify.Connect();
+            try
+            {
+                return _spotify.Connect();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + @"
+
+Please restart the application.", @"Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(0);
+                return false;
+            }
         }
 
         public void CheckSpotify()
@@ -46,13 +70,11 @@ Application will now close.", @"Connection Error", MessageBoxButtons.OK, Message
 Application will now close.", @"Not Running", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(0);
             }
-            if (!SpotifyLocalAPI.IsSpotifyWebHelperRunning())
-            {
-                MessageBox.Show(@"Spotify is not running!
+            if (SpotifyLocalAPI.IsSpotifyWebHelperRunning()) return;
+            MessageBox.Show(@"Spotify is not running!
 
 Application will now close.", @"Not Running", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Environment.Exit(0);
-            }
+            Environment.Exit(0);
         }
 
         public async void Play()
@@ -87,19 +109,17 @@ Application will now close.", @"Not Running", MessageBoxButtons.OK, MessageBoxIc
 
         public string GetArtist()
         {
-            return _spotify.GetStatus().Track.ArtistResource.Name;
+            return string.IsNullOrEmpty(_spotify.GetStatus().Track.ArtistResource.Name) ? "" : _spotify.GetStatus().Track.ArtistResource.Name;
         }
 
         public string GetSong()
         {
-            if (String.IsNullOrEmpty(_spotify.GetStatus().Track.TrackResource.Name))
-                return "";
-            return _spotify.GetStatus().Track.TrackResource.Name;
+            return string.IsNullOrEmpty(_spotify.GetStatus().Track.TrackResource.Name) ? "" : _spotify.GetStatus().Track.TrackResource.Name;
         }
 
         public string GetPlaying()
         {
-            return $"{GetSong()} - {GetArtist()}";
+            return $@"{GetSong()} - {GetArtist()}";
         }
     }
 }
