@@ -56,13 +56,13 @@ namespace SpotifyController
 
         private void Listener(object o, SpeechRecognizedEventArgs e)
         {
-            _spotify.CheckSpotify();
+            
             foreach (var rec in e.Result.Words)
             {
                 if (_enable)
                 {
                     labelDetected.Text = rec.Text;
-
+                    _spotify.CheckSpotify();
                     if (_play.Contains(rec.Text))
                         _spotify.Play();
 
@@ -100,7 +100,8 @@ namespace SpotifyController
                 _enable = !_enable;
                 labelDetected.Text = $@"Enable: {_enable}";
             }
-            SaveSong();
+           // SaveSong();
+            labelSong.Text = _spotify.GetPlaying();
         }
 
         private void CreateDirectory()
@@ -108,7 +109,7 @@ namespace SpotifyController
             if (!File.Exists(_dir))
                 File.Create(_dir);
         }
-
+/*
         private void SaveSong()
         {
             if (_currentSong == _spotify.GetPlaying() || !_spotify.Connected()) return;
@@ -117,6 +118,6 @@ namespace SpotifyController
 
             File.WriteAllText(_dir, _currentSong);
             labelSong.Text = _currentSong;
-        }
+        }*/
     }
 }

@@ -43,6 +43,7 @@ Application will now close.", @"Connection Error", MessageBoxButtons.OK, Message
         private void _spotify_OnTrackChange(object sender, TrackChangeEventArgs e)
         {
             _currentPlaying = e.NewTrack.TrackResource.Name + " - " + e.NewTrack.ArtistResource.Name;
+            SaveSong();
         }
 
         public bool Connected()
@@ -119,7 +120,14 @@ Application will now close.", @"Not Running", MessageBoxButtons.OK, MessageBoxIc
 
         public string GetPlaying()
         {
-            return $@"{GetSong()} - {GetArtist()}";
+            return !string.IsNullOrEmpty(_currentPlaying) ? _currentPlaying : $@"{GetSong()} - {GetArtist()}";
+        }
+
+        private void SaveSong()
+        {
+            if (!Connected()) return;
+
+            File.WriteAllText(_dir, GetPlaying());
         }
     }
 }
